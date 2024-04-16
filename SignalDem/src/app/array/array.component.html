@@ -1,0 +1,9 @@
+<h2>Array con Signal :D</h2>
+<input type="text" #nameInput> <button (click) ="addName(nameInput.value)">aggiungi</button>
+<ul>
+    @for(name of names();track $index){
+        <li>{{name}} <button (click)="deleteName($index)">delete</button></li>
+    } @empty {
+        <li> lista vuota </li>
+    }
+</ul>
